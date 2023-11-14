@@ -9,15 +9,20 @@ public class TcpServer {
             Socket soc=scr.accept();
             InputStream in=soc.getInputStream();
             FileOutputStream f=new FileOutputStream("rcv.txt");
+            FileOutputStream fe=new FileOutputStream("Encrypted.txt");
             byte[] buffer =new byte[1024];
+            byte[] encrypt =new byte[1024];
             int bread;
             while((bread=in.read(buffer))!=-1){
                 for(int y=0;y<bread;y++){
+                    encrypt[y]=(byte)(buffer[y]);
                     buffer[y]=(byte)(buffer[y]-sf);
                 }
             f.write(buffer,0,bread);
+            fe.write(encrypt,0,bread);
             }
             f.close();
+            fe.close();
             in.close();
             soc.close();
             scr.close();
