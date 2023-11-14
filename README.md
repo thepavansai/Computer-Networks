@@ -4,6 +4,6 @@ Implementation of Some Concepts of Computer Networks using Java and Ns2 Simulato
 
 To Compile all Files use "javac *.javac".
 
-To Run use "java <filename>".
+To Run use "java filename".
 
 To start RMI Registry open new Cmd window and run "start rmiregistry".
