@@ -1,6 +1,6 @@
 # Computer-Networks
 
-Implementation of Some Concepts of Computer Networks using Java and Ns2 Simulator.
+Implementation of Some Concepts of Computer Networks using Java.
 
 To Compile all Files use "javac *.javac".
 
